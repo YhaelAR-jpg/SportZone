@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Zp.css"> <!-- Enlace al CSS -->
+</head>
+<body>
+    <h1 class="titulo">Calcetas</h1>
+    <div id="nav-placeholder"></div>
+    <main class="contenedor-secundario"> <!-- Contenedor principal de esta sección -->
+
+        <!-- Contenedor de productos -->
+        <div class="row" id="clcetines1">
+            <div class="col">
+
+                <!-- Producto 1 -->
+                <div class="producto" id="producto-1">
+                    <div class="marca-seleccion">✓</div> <!-- Icono verde de selección -->
+                    <img src="IMG/calcetas1.jpeg" alt="" onclick="toggleProducto(1)">
+                    <p>Calceta Adidas $199.00</p>
+                    <button class="btn-seleccionar" id="btn-1" onclick="toggleProducto(1)">Seleccionar</button>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="producto" id="producto-2">
+                    <div class="marca-seleccion">✓</div>
+                    <img src="IMG/calcetas2.png" alt="" onclick="toggleProducto(2)">
+                    <p>Calceta Nike $299.00</p>
+                    <button class="btn-seleccionar" id="btn-2" onclick="toggleProducto(2)">Seleccionar</button>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="producto" id="producto-3">
+                    <div class="marca-seleccion">✓</div>
+                    <img src="IMG/calcetas3.png" alt="" onclick="toggleProducto(3)">
+                    <p>Calceta Nike $239.00</p>
+                    <button class="btn-seleccionar" id="btn-3" onclick="toggleProducto(3)">Seleccionar</button>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <!-- Producto 4 -->
+                <div class="producto" id="producto-4">
+                    <div class="marca-seleccion">✓</div>
+                    <img src="IMG/calcetas4.png" alt="" onclick="toggleProducto(4)">
+                    <p>Calceta Adidas $241.00</p>
+                    <button class="btn-seleccionar" id="btn-4" onclick="toggleProducto(4)">Seleccionar</button>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="producto" id="producto-5">
+                    <div class="marca-seleccion">✓</div>
+                    <img src="IMG/calcetas5.png" alt="" onclick="toggleProducto(5)">
+                    <p>Calceta Adidas $241.00</p>
+                    <button class="btn-seleccionar" id="btn-5" onclick="toggleProducto(5)">Seleccionar</button>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="producto" id="producto-6">
+                    <div class="marca-seleccion">✓</div>
+                    <img src="IMG/calcetin6.jpg" alt="" onclick="toggleProducto(6)">
+                    <p>Calcetas Adidas $156.00</p>
+                    <button class="btn-seleccionar" id="btn-6" onclick="toggleProducto(6)">Seleccionar</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Lista de productos seleccionados -->
+        <div id="productos-seleccionados">
+            <h3>Productos Seleccionados: <span id="contador-seleccionados">0</span></h3>
+            <ul id="lista-seleccionados"></ul>
+        </div>
+
+        <!-- Botones principales -->
+        <div class="botones">
+            <button popovertarget="ps" onclick="mostrarPopover()">Aceptar</button>
+            <button><a href="index.html">Cancelar</a></button>
+        </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="footer"></div>
+
+        <!-- Ventana emergente -->
+        <div popover id="ps">
+            <div class="contenedor-principal">
+                <h2 class="tituloPOPOVER">Pedidos</h2>
+                <ul id="seleccionadospopover"></ul>
+                <p id="totalPagar">Total: $0</p>
+            </div>
+
+            <div class="botones">
+                <button popovertarget="Condiciones" popovertargetaction="toggle">
+                    Confirmar productos
+                </button>
+                <button><a href="Catalogo.html">Cancelar productos</a></button>
+            </div>
+        </div>
+
+        <!-- Términos -->
+        <div popover id="Condiciones">
+            <div class="contenedor-principal">
+                <h2 class="titulo">Términos y Condiciones</h2>
+
+                <p id="Con">
+                    Al usar este sitio, aceptas los siguientes términos:<br><br>
+                    • El contenido mostrado es informativo.<br>
+                    • Los pedidos deben confirmarse antes del envío.<br>
+                    • No se permite copia o mal uso del contenido.<br>
+                    • No somos responsables por errores o interrupciones.<br>
+                    • El uso del sitio implica aceptación total.
+                </p>
+            </div>
+
+            <div class="botones">
+                <a href="Pago.html"><button>Confirmar productos</button></a>
+                <button><a href="Catalogo.html">Cancelar productos</a></button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Archivo JS que maneja la selección -->
+    <script src="JS/Seleccionar.js"></script>
+
+</body>
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        })
+        .catch(err => console.error('Error cargando el menú:', err));
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        
+        })
+        .catch(err => console.error('Error cargando el menú:', err));
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Zone</title>
+    <link rel="stylesheet" href="css/Zp.css">
+</head>
+
+<body>
+
+    <!-- ======= MENÚ DE NAVEGACIÓN ======= -->
+<nav class="navigation">
+    <div class="nav-botones">
+        <a href="IniciarS.html" class="nav-link iniciarSS">Iniciar Sesión</a>
+        <a href="registro.html" class="nav-link registro">Registrarse</a>
+    </div>
+</nav>
+
+    <!-- ======= CONTENIDO PRINCIPAL ======= -->
+    <main class="contenedor-principal">
+
+        <h1 class="Ti">//// SPORT ZONE ////</h1>
+
+        <section class="imagen-principal">
+            <img src="img/Logo2.png" alt="Logo Sport Zone">
+        </section>
+
+        <section class="bienvenida">
+            <h2>Bienvenido a Sport Zone</h2>
+            <p>
+                Encuentra los mejores artículos deportivos: tenis, playeras,
+                balones y más.
+                <br>
+                Inicia sesión o regístrate para acceder a todas las funciones.
+            </p>
+        </section>
+    </main>
+<!----
+    <div>
+        <h2>Ubicación</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!3m2!1ses!2smx!4v1770659700731!5m2!1ses!2smx!6m8!1m7!1shcD_Tit3OsiO2cpZ_wkS6Q!2m2!1d20.24541090211626!2d-99.08896494053171!3f349.5261110078121!4f-9.485712662447611!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+-->
+    <main class="contenedor-C">
+        <h1 class="titulo">Catalogo</h1>
+        <br>
+        <div class="d-flex flex-row" id="catalogo">
+            <div class="col" id="TB">
+                <a href="Tennis.html"><img src="IMG/Tennislogo.jpeg" alt="" >
+                <a href="Balones.html"><img src="IMG/Balonlogo.jpeg" alt=""> 
+            </div>
+            <div class="col" id="PC">
+                <a href="playeras.html"><img src="IMG/Playeralogo.jpeg" alt="">
+                <a href="calcetas.html"><img src="IMG/Calcetaslogo.jpeg" alt="">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="footer"></div>
+</body>
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        
+        })
+        .catch(err => console.error('Error cargando el menú:', err));
+</script>
+</html>

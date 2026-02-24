@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Zp.css">
+</head>
+<body>
+    <!--Clase del contenedor (cuadro)-->
+    <main class="contenedor-ISS">
+    <!--Contenedor para aditar titulo-->
+    <div class="contenedor-tercero">
+        <h3>No. de la tarjeta</h3>
+        <input type="#" placeholder="Ingresa el numero de tu tarjeta: " id="it">
+        <br>
+        <br>
+        <input type="#"placeholder="MM/YY">
+        <input type="#" placeholder="CVC">
+        <div class="botones">
+            <button popovertarget="Mensaje">Pagar</button>
+            <button><a href="Pago.html">Cancelar Pago</a></button>
+        </div>
+<!--Ventana emergente popup-->
+        <div popover id="Mensaje">
+            <div class="contenedor-principal"></div>
+                <center><h2>Tu compra se realizo con exito!!</h2> </center>
+            <div>
+                <div class="botones">
+                    <button><a href="Catalogo.html"> Aceptar</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

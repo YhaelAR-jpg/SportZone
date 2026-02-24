@@ -1,0 +1,856 @@
+/*Estilo general para toda la página*/
+* {
+    margin: 0; /* márgenes */
+    padding: 0;
+    box-sizing: border-box; /* Incluye bordes y padding en el tamaño total */
+    font-family: "Poppins", sans-serif; /* Fuente principal */
+}
+
+body {
+    background: radial-gradient(circle, #0d4b65, #06162d);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////*/
+/* Contenedor principal (páginas de bienvenida) */
+.contenedor-principal {
+    text-align: center; /* Centra el contenido */
+    max-width: 800px; /* Límite del ancho */
+    padding: 40px 20px; /* Espacio interno */
+}
+
+
+/* Títulos grandes como "Tennis", "Catalogo", etc */
+.titulo {
+    color: #00ff66; /* Verde neón */
+    font-size: 3rem; /* Tamaño grande */
+    margin-bottom: 25px; /* Separación inferior */
+    text-align: center; /* Centrado */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    text-shadow: 0 0 15px rgba(13, 207, 100, 0.6); /* Efecto brillante */
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    font-size: 400%;
+}
+
+/* Contenedor para todas las páginas de productos */
+.contenedor-secundario {
+    text-align: center;
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+/* Título inicial del Index */
+.Ti {
+    color: #00e1ff; /* Azul neón */
+    font-size: 3rem;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(0, 255, 102, 0.6);
+}
+
+/* Contenedor usado en formularios (registro, login) */
+.contenedor-tercero {
+    text-align: center;
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+/* Estilo GENERAL para inputs */
+#it{
+    width: 300px; /* Ancho */
+    height: 50px; /* Alto */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; /* Texto grueso */
+    font-size: 20px; /* Tamaño */
+}
+
+/* Contenedor de logo principal */
+.imagen-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.imagen-principal img {
+    width: 400px; /* Tamaño imagen */
+    height: auto;
+    border-radius: 30px; /* Bordes redondeados */
+}
+
+/* Textos de bienvenida */
+.bienvenida h2 {
+    color: #00ff66;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.bienvenida p {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Contenedor general para botones */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre botones */
+}
+
+/* Botones generales */
+/* From Uiverse.io by mrhyddenn */ 
+.botones button {
+    background: #fff;
+    border: none;
+    padding: auto;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    position: relative;
+    overflow: hidden;
+}
+
+.botones button span {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+.botones button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.botones button:hover {
+    color: #fff;
+}
+
+.botones button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+
+
+.botones a {
+    text-decoration: none;
+    color: #000; /* Texto negro */
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Imágenes de catálogo Tennis */
+#imagenes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#imagenes img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Playeras */
+#playeras1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#playeras1 img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Calcetas */
+#clcetines1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#clcetines1 img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Balones */
+#Balones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#Balones img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Catálogo principal */
+#catalogo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#catalogo img{
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* Texto de títulos de productos */
+#TB{
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: aliceblue;
+}
+
+/* Texto de precios */
+#PC{
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+/*================= FORMULARIO LOGIN Y REGISTRO =================*/
+.contenedor-ISS {
+    background-color: rgba(45, 42, 82, 0.85);
+    border: 2px solid #f6f8f7;
+    border-radius: 30px;
+    padding: 30px 25px;   /* espacio interno real */
+    width: 420px;        /* MÁS compacto */
+    margin: 40px auto;
+}
+
+
+/*================= POPUP PRINCIPAL =================*/
+#ps {
+    width: 450px; /* Ancho popup */
+    height: auto; /* Se ajusta solo */
+    position: fixed; /* Centrado */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    background-color: #59c1f59b;
+    border: 3px solid #e4e9eb;
+    color: #ccc;
+    padding: 20px;
+}
+
+/* Total del pedido */
+#totalPagar {
+    color: #020202;
+    font-size: 22px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.tituloPOPOVER{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+    font-size: 60px;
+}
+
+/* Popup términos */
+#Condiciones {
+    width: 800px;
+    height: 550px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    background-color: #2c2b2b;
+    color: white;
+    padding: 40px 60px;  
+}
+
+/* Fondo oscuro al abrir popover */
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+/* Texto del popup */
+#Con{
+    color: #eef2ed;
+    font-size: 120%;
+}
+
+/* Imagen de métodos de pago */
+#Mpago img{
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Popup pequeño "Compra realizada" */
+#Mensaje {
+    width: 450px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    background-color: #2c2b2b;
+    border: 3px solid #0fb6df;
+    color: #ccc;
+    padding: 20px;
+}
+
+/*================= TARJETAS DE PRODUCTOS =================*/
+.producto {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.producto.seleccionado {
+    border-color: #28a745; /* Verde de selección */
+    background-color: #f8fff9; /* Fondo suave */
+}
+
+/* Imágenes de productos */
+.producto img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.producto img:hover {
+    transform: scale(1.05); /* Zoom suave */
+}
+
+/* Botón para seleccionar productos */
+.btn-seleccionar {
+    background-color: #f5f9fc;
+    color: rgb(23, 14, 14);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-seleccionar.seleccionado {
+    background-color: #28a745; /* Verde al seleccionar */
+}
+
+/* Icono ✓ de selección */
+.marca-seleccion {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: none; /* Oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.producto.seleccionado .marca-seleccion {
+    display: flex; /* Se muestra al seleccionar */
+}
+
+.producto {
+    position: relative; /* Necesario para ubicar ✓ */
+}
+
+/* Lista de productos elegidos */
+#productos-seleccionados {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa21;
+    border-radius: 5px;
+    display: block; /* Oculto hasta que haya selección */
+}
+
+/*================= MÉTODOS DE PAGO =================*/
+#Mpago {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+#Mpago .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Estilos de imágenes de pago */
+#Mpago a img, 
+#Mpago img {
+    width: 230px;
+    height: 130px;
+    border-radius: 15px;
+    background-color: #ffffff10; /* Fondo translúcido */
+    padding: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Hover moderno */
+#Mpago img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #00ff6680;
+    border-color: #00ff66;
+}
+
+/*================= FORMULARIO DE TARJETA =================*/
+.contenedor-ISS h3 {
+    font-size: 1.5rem;
+    color: #00e1ff;
+    margin-bottom: 15px;
+}
+
+.contenedor-ISS input {
+    width: 300px;
+    height: 50px;
+    border-radius: 12px;
+    border: 2px solid #00e1ff50;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+/* Efecto al seleccionar input */
+.contenedor-ISS input:focus {
+    border-color: #00e1ff;
+    box-shadow: 0 0 12px #00e1ff80;
+}
+
+/* Inputs pequeños (MM/YY - CVC) */
+.contenedor-ISS input:nth-child(3),
+.contenedor-ISS input:nth-child(4) {
+    width: 140px; /* Más pequeños */
+}
+
+/* Botones del formulario tarjeta 
+.contenedor-ISs .botones button {
+    background-color: #00ff66;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contenedor-ISS .botones button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #00ff6680;
+}
+*/
+
+
+/* Popup "Compra Exitosa" */
+#Mensaje {
+    width: 400px;
+    height: 40%;
+    border-radius: 20px;
+    padding: 40px 30px;
+    background-color: #1c1c1c;
+    border: 3px solid #00ff66;
+    color: white;
+    box-shadow: 0 0 25px #00ff6655;
+}
+
+/* Texto del popup */
+#Mensaje h2 {
+    color: #00ff66;
+    text-shadow: 0 0 10px #00ff6655;
+}
+
+
+/*CONENEDOR HORIZONTAL*/
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite salto de línea */
+    justify-content: center;
+    gap: 30px;
+}
+.col {
+    display: contents; /* Elimina la columna visualmente */
+}
+/*//////////////////////////////*/
+
+/* ===== ESTILO SOLO PARA NAVEGACIÓN ===== */
+.navigation {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background: rgba(6, 22, 45, 0.85);
+}
+
+/* Enlaces del menú */
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 22px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.navigation a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Enlace destacado (Registro) */
+.navigation a.registro {
+    border: 2px solid #00ff66;
+    color: #00ff66;
+}
+
+.navigation a.registro:hover {
+    background: #00ff66;
+    color: #06162d;
+}
+.contenedor-C .botones button {
+    background-color: #00ff66;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contenedor-C .botones button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #00ff6680;
+}
+
+.navigation a.iniciarSS {
+    border: 2px solid #00ff66;
+    color: #00ff66;
+}
+
+.navigation a.iniciarSS:hover {
+    background: #00ff66;
+    color: #06162d;
+}
+
+.contenedor-Ca {
+    display: flex;
+    gap: 20px;          /* espacio entre elementos */
+    justify-content: center; 
+    align-items: center;
+}
+
+
+
+#nav-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(180deg, #061a2e, #0b2a4a);
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Título del menú */
+#nav-placeholder h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ff9c;
+}
+
+/* Lista */
+#nav-placeholder ul {
+    list-style: none;
+    padding: 0;
+}
+
+#nav-placeholder li {
+    margin: 15px 0;
+}
+
+/* Links */
+#nav-placeholder a {
+    text-decoration: none;
+    color: #cfd8dc;
+    display: block;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+#nav-placeholder a:hover {
+    background: #00ff9c;
+    color: #061a2e;
+}
+
+/* Opción deshabilitada */
+#nav-placeholder .disabled {
+    color: #777;
+    cursor: not-allowed;
+}
+
+#nav-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+
+    background: linear-gradient(
+        180deg,
+        #2d7dcc 0%,
+        #5669a1 50%,
+        #34edc2 100%
+    );
+
+    padding: 25px 20px;
+    color: #e0e6ed;
+
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/**/
+#nav-placeholder h2 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #00ff9c;
+    letter-spacing: 2px;
+}
+
+#nav-placeholder ul {
+    list-style: none;
+    padding: 0;
+}
+
+#nav-placeholder li {
+    margin: 18px 0;
+}
+
+#nav-placeholder a {
+    color: #151818;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#nav-placeholder a:hover {
+    background: rgba(0, 255, 156, 0.15);
+    color: #00ff9c;
+}
+
+
+.tituloNav{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200%;
+}
+
+
+/* ===== FOOTER SPORT ZONE ===== */
+.footer {
+    background: linear-gradient(135deg, #2d7dcc, #5fb8a3);
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Contenedor de iconos */
+.footer .social-icons {
+    margin: 20px 0;
+}
+
+/* Iconos en círculo */
+.footer .social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Hover moderno */
+.footer .social-icons a:hover {
+    background: #56bf3f;
+    color: #000000;
+    transform: translateY(-4px);
+}
+
+/* Links */
+.footer .footer-links {
+    margin: 15px 0;
+}
+
+.footer .footer-links a {
+    color: #040404;
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+    color: #000000;
+}
+
+/* Texto inferior */
+.footer p {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+.footer {
+    background: linear-gradient(135deg, #2d7dcc, #5fb8a3);
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+
+    width: 100%;      /* Ocupa todo */
+    margin: 50;        /* Sin centrado */
+    border-radius: 0; /* Sin bordes redondeados */
+}
+
+#catalogoSec {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin: 40px auto;
+}
+
+#catalogoSec img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+
+    .titulo {
+        font-size: 250%;
+    }
+
+    .imagen-principal img {
+        width: 300px;
+    }
+
+    #catalogoSec {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    #nav-placeholder {
+        width: 180px;
+    }
+
+    .contenedor-ISS {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 180%;
+        letter-spacing: 1px;
+    }
+
+    .imagen-principal img {
+        width: 220px;
+    }
+
+    #imagenes img,
+    #playeras1 img,
+    #clcetines1 img,
+    #Balones img,
+    #catalogo img {
+        width: 140px;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .botones button {
+        width: 100%;
+    }
+
+    #nav-placeholder {
+        position: relative;  /* Ya no fijo */
+        width: 100%;
+        height: auto;
+    }
+
+    #Mpago {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+
+
