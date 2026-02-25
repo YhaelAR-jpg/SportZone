@@ -240,7 +240,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/*================= FORMULARIO LOGIN Y REGISTRO =================*/
+/*================= FORMULARIO LOGIN Y REGISTRO =================
 .contenedor-ISS {
     background-color: rgba(45, 42, 82, 0.85);
     border: 2px solid #f6f8f7;
@@ -248,7 +248,7 @@ body {
     padding: 30px 25px;
 
     width: 420px;
-    max-width: 95%;   /* 👈 hace que no se desborde en celular */
+    max-width: 95%;    👈 hace que no se desborde en celular 
     
     margin: 40px auto;
 }
@@ -261,7 +261,7 @@ body {
     }
 
 }
-
+*/
 
 /*================= POPUP PRINCIPAL =================*/
 #ps {
