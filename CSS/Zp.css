@@ -245,9 +245,21 @@ body {
     background-color: rgba(45, 42, 82, 0.85);
     border: 2px solid #f6f8f7;
     border-radius: 30px;
-    padding: 30px 25px;   /* espacio interno real */
-    width: 420px;        /* MÁS compacto */
+    padding: 30px 25px;
+
+    width: 420px;
+    max-width: 95%;   /* 👈 hace que no se desborde en celular */
+    
     margin: 40px auto;
+}
+@media (max-width: 480px) {
+
+    .contenedor-ISS {
+        width: 95%;
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
 }
 
 
