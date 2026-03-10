@@ -1,16 +1,16 @@
 <?php
-include('conexion.php');
+include("conexion.php");
 
 $nombre = $_POST['Nombre'];
 $contrasena = $_POST['Contrasena'];
 
 $consulta = mysqli_query($conexion, 
-"SELECT * FROM cliente WHERE nombreC='$nombre' AND contrasena='$contrasena'");
+"SELECT * FROM Cliente WHERE nombreC='$nombre' AND contrasena='$contrasena'");
 
-if (mysqli_num_rows($consulta) > 0) {
+if(mysqli_num_rows($consulta) > 0){
     header("Location: Catalogo.html");
-    exit;
-} else {
+    exit();
+}else{
     echo "Usuario o contraseña incorrectos";
 }
 
