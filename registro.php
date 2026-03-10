@@ -1,21 +1,20 @@
 <?php
-include('conexion.php');
+include("conexion.php");
 
-/*Variables del formulario*/
 $nombre = $_POST['Nombre'];
-$correo =$_POST['Correo'];
+$correo = $_POST['Correo'];
 $direccion = $_POST['Direccion'];
 $contrasena = $_POST['Contrasena'];
 
-
 $consulta = mysqli_query($conexion,
-"insert into cliente(nombreC, correo, direccion, contrasena) values ('$nombre',
-'$correo','$direccion','$contrasena')");
-if (!$consulta) {
-    echo "Error al realizar tu registro";
-}else{
-    require ("IniciarS.html");
+"INSERT INTO Cliente(nombreC, correo, direccion, contrasena) 
+VALUES ('$nombre','$correo','$direccion','$contrasena')");
 
+if($consulta){
+    header("Location: IniciarS.html");
+}else{
+    echo "Error al realizar tu registro";
 }
+
 mysqli_close($conexion);
 ?>
